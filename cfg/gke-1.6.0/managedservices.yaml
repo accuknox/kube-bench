@@ -9,7 +9,7 @@ groups:
     text: "Image Registry and Image Scanning"
     checks:
       - id: 5.1.1
-        text: "Ensure Image Vulnerability Scanning is enabled (Automated)"
+        text: "Ensure Image Vulnerability Scanning is enabled (Manual)"
         type: "manual"
         remediation: |
           For Images Hosted in GCR:
@@ -128,7 +128,7 @@ groups:
     text: "Identity and Access Management (IAM)"
     checks:
       - id: 5.2.1
-        text: "Ensure GKE clusters are not running using the Compute Engine default service account (Automated))"
+        text: "Ensure GKE clusters are not running using the Compute Engine default service account (Manual))"
         type: "manual"
         remediation: |
           Using Command Line:
@@ -187,7 +187,7 @@ groups:
     text: "Cloud Key Management Service (Cloud KMS)"
     checks:
       - id: 5.3.1
-        text: "Ensure Kubernetes Secrets are encrypted using keys managed in Cloud KMS (Automated)"
+        text: "Ensure Kubernetes Secrets are encrypted using keys managed in Cloud KMS (Manual)"
         type: "manual"
         remediation: |
           To create a key:
@@ -226,7 +226,7 @@ groups:
     text: "Node Metadata"
     checks:
       - id: 5.4.1
-        text: "Ensure the GKE Metadata Server is Enabled (Automated)"
+        text: "Ensure the GKE Metadata Server is Enabled (Manual)"
         type: "manual"
         remediation: |
           Using Command Line:
@@ -249,7 +249,7 @@ groups:
     text: "Node Configuration and Maintenance"
     checks:
       - id: 5.5.1
-        text: "Ensure Container-Optimized OS (cos_containerd) is used for GKE node images (Automated)"
+        text: "Ensure Container-Optimized OS (cos_containerd) is used for GKE node images (Manual)"
         type: "manual"
         remediation: |
           Using Command Line:
@@ -260,7 +260,7 @@ groups:
         scored: false
 
       - id: 5.5.2
-        text: "Ensure Node Auto-Repair is enabled for GKE nodes (Automated)"
+        text: "Ensure Node Auto-Repair is enabled for GKE nodes (Manual)"
         type: "manual"
         remediation: |
           Using Command Line:
@@ -271,7 +271,7 @@ groups:
         scored: false
 
       - id: 5.5.3
-        text: "Ensure Node Auto-Upgrade is enabled for GKE nodes (Automated)"
+        text: "Ensure Node Auto-Upgrade is enabled for GKE nodes (Manual)"
         type: "manual"
         remediation: |
           Using Command Line:
@@ -283,7 +283,7 @@ groups:
         scored: false
 
       - id: 5.5.4
-        text: "When creating New Clusters - Automate GKE version management using Release Channels (Automated)"
+        text: "When creating New Clusters - Automate GKE version management using Release Channels (Manual)"
         type: "manual"
         remediation: |
           Using Command Line:
@@ -296,7 +296,7 @@ groups:
         scored: false
 
       - id: 5.5.5
-        text: "Ensure Shielded GKE Nodes are Enabled (Automated)"
+        text: "Ensure Shielded GKE Nodes are Enabled (Manual)"
         type: "manual"
         remediation: |
           Using Command Line:
@@ -308,7 +308,7 @@ groups:
         scored: false
 
       - id: 5.5.6
-        text: "Ensure Integrity Monitoring for Shielded GKE Nodes is Enabled (Automated)"
+        text: "Ensure Integrity Monitoring for Shielded GKE Nodes is Enabled (Manual)"
         type: "manual"
         remediation: |
           Using Command Line:
@@ -324,7 +324,7 @@ groups:
         scored: false
 
       - id: 5.5.7
-        text: "Ensure Secure Boot for Shielded GKE Nodes is Enabled (Automated)"
+        text: "Ensure Secure Boot for Shielded GKE Nodes is Enabled (Manual)"
         type: "manual"
         remediation: |
           Using Command Line:
@@ -342,7 +342,7 @@ groups:
     text: "Cluster Networking"
     checks:
       - id: 5.6.1
-        text: "Enable VPC Flow Logs and Intranode Visibility (Automated)"
+        text: "Enable VPC Flow Logs and Intranode Visibility (Manual)"
         type: "manual"
         remediation: |
           Using Command Line:
@@ -356,7 +356,7 @@ groups:
         scored: false
 
       - id: 5.6.2
-        text: "Ensure use of VPC-native clusters (Automated)"
+        text: "Ensure use of VPC-native clusters (Manual)"
         type: "manual"
         remediation: |
           Using Command Line:
@@ -372,7 +372,7 @@ groups:
         scored: false
 
       - id: 5.6.3
-        text: "Ensure Control Plane Authorized Networks is Enabled (Automated)"
+        text: "Ensure Control Plane Authorized Networks is Enabled (Manual)"
         type: "manual"
         remediation: |
           Using Command Line:
@@ -434,7 +434,7 @@ groups:
         scored: false
 
       - id: 5.6.7
-        text: "Ensure use of Google-managed SSL Certificates (Automated)"
+        text: "Ensure use of Google-managed SSL Certificates (Manual)"
         type: "manual"
         remediation: |
           If services of type:LoadBalancer are discovered, consider replacing the Service with
@@ -449,7 +449,7 @@ groups:
     text: "Logging"
     checks:
       - id: 5.7.1
-        text: "Ensure Logging and Cloud Monitoring is Enabled (Automated)"
+        text: "Ensure Logging and Cloud Monitoring is Enabled (Manual)"
         type: "manual"
         remediation: |
           To enable Logging for an existing cluster, run the following command:
@@ -487,7 +487,7 @@ groups:
     text: "Authentication and Authorization"
     checks:
       - id: 5.8.1
-        text: "Ensure authentication using Client Certificates is Disabled (Automated)"
+        text: "Ensure authentication using Client Certificates is Disabled (Manual)"
         type: "manual"
         remediation: |
           Using Command Line:
@@ -512,7 +512,7 @@ groups:
         scored: false
 
       - id: 5.8.3
-        text: "Ensure Legacy Authorization (ABAC) is Disabled (Automated)"
+        text: "Ensure Legacy Authorization (ABAC) is Disabled (Manual)"
         type: "manual"
         remediation: |
           Using Command Line:
@@ -533,7 +533,7 @@ groups:
         scored: false
 
       - id: 5.9.2
-        text: "Enable Customer-Managed Encryption Keys (CMEK) for Boot Disks (Automated)"
+        text: "Enable Customer-Managed Encryption Keys (CMEK) for Boot Disks (Manual)"
         type: "manual"
         remediation: |
           Using Command Line:
@@ -552,7 +552,7 @@ groups:
     text: "Other Cluster Configurations"
     checks:
       - id: 5.10.1
-        text: "Ensure Kubernetes Web UI is Disabled (Automated)"
+        text: "Ensure Kubernetes Web UI is Disabled (Manual)"
         type: "manual"
         remediation: |
           Using Command Line:
@@ -563,7 +563,7 @@ groups:
         scored: false
 
       - id: 5.10.2
-        text: "Ensure that Alpha clusters are not used for production workloads (Automated)"
+        text: "Ensure that Alpha clusters are not used for production workloads (Manual)"
         type: "manual"
         remediation: |
           Using Command Line:
@@ -586,7 +586,7 @@ groups:
         scored: false
 
       - id: 5.10.4
-        text: "Ensure use of Binary Authorization (Automated)"
+        text: "Ensure use of Binary Authorization (Manual)"
         type: "manual"
         remediation: |
           Using Command Line:
